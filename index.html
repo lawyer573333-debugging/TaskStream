@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskStream | Agentic Workflow Automation</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow blob-1"></div>
+        <div class="glow blob-2"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1 class="logo">Task<span>Stream</span></h1>
+            <p class="tagline">Agentic AI that turns chaotic emails into structured, automated workflows in seconds.</p>
+        </header>
+
+        <section class="input-section glass-panel">
+            <h2>1. Input Client Communication</h2>
+            <p class="section-desc">Paste the messy client email or brain-dump below.</p>
+            <textarea id="email-input"
+                placeholder="e.g. Hey, we need the new logo variations by tomorrow and also can you update the website footer to include the new links? And don't forget we talked about adding a blog section next week..."></textarea>
+            <button id="analyze-btn" class="primary-btn">
+                <span class="btn-text">Extract Intent & Create Workflow</span>
+                <div class="loader" id="btn-loader"></div>
+            </button>
+        </section>
+
+        <section class="results-container hidden" id="results-section">
+            <div class="board-section glass-panel">
+                <h2>2. Agentic Breakdown</h2>
+                <div class="kanban-board">
+                    <div class="kanban-column">
+                        <h3>To-Do</h3>
+                        <div class="task-list" id="todo-list">
+                            <!-- Tasks will be injected here -->
+                        </div>
+                    </div>
+                    <div class="kanban-column">
+                        <h3>Doing</h3>
+                        <div class="task-list" id="doing-list"></div>
+                    </div>
+                    <div class="kanban-column">
+                        <h3>Done</h3>
+                        <div class="task-list" id="done-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="email-section glass-panel">
+                <h2>3. Auto-Drafted Clarification</h2>
+                <p class="section-desc">Pre-written response for missing details.</p>
+                <div class="email-draft" id="draft-output">
+                    <!-- Draft will be injected here -->
+                </div>
+                <button class="secondary-btn" id="copy-btn">Copy to Clipboard</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
